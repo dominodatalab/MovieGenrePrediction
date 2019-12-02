@@ -4,6 +4,7 @@ from keras.models import Sequential
 from keras.layers import Dense, Activation
 from keras import optimizers
 from sklearn.preprocessing import MultiLabelBinarizer
+import keras
 from src.utils.eval_metrics import *
 import time
 
