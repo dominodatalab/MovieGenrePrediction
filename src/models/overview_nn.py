@@ -51,7 +51,10 @@ print("Training done!\n")
 import matplotlib.pyplot as plt
 
 # Plot training & validation accuracy values
-plt.plot(history.history['acc'])
+if keras.__version__ < '2.3.0':
+    plt.plot(history.history['acc'])
+else:
+    plt.plot(history.history['accuracy'])
 plt.title('Model accuracy')
 plt.ylabel('Accuracy')
 plt.xlabel('Epoch')
