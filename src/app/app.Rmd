@@ -11,7 +11,7 @@ output:
 library(httr)
 library(jsonlite)
 
-url <- "https://trial-models.dominodatalab.com:443/models/5e28b4d4c9e77c00071b722a/latest/model"
+url <- "https://demo.dominodatalab.com:443/models/5eda84a6cdfc18044c36f8d5/latest/model"
 
 last_modified<-file.info(paste0(Sys.getenv("DOMINO_WORKING_DIR"),"/data/processed/movies_with_overviews.pkl"))$mtime
 ```
