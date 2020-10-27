@@ -44,6 +44,7 @@ for i in set(all_ids):
         print(i)
         if i == 10769:
             Genre_ID_to_name[10769]="Foreign" # look up what the above genre ids are. see if there's a programmatic way to do it
+            
 print("Mapping from genre id to genre name is saved in the Genre_ID_to_name dictionary:")
 pprint.pprint(Genre_ID_to_name, indent=4)
 print('\n')
