@@ -7,12 +7,12 @@ from sklearn.model_selection import train_test_split
 
 with open('data/interim/movies_with_overviews.pkl','rb') as f:
     movies_with_overviews=pickle.load(f)
-with open('data/processed/Genredict.pkl','rb') as f:
+with open('data/processed/genre_id_to_name_dict.pkl','rb') as f:
     Genre_ID_to_name=pickle.load(f)  
 with open('data/processed/Y.pkl','rb') as f:
     Y=pickle.load(f)
 print("Loaded the list of de-duped movies with overviews from data/interim/movies_with_overviews.pkl.")
-print('Loaded the mapping from genre id to genre name from data/processed/Genredict.pkl.')
+print('Loaded the mapping from genre id to genre name from data/processed/genre_id_to_name_dict.pkl.')
 print("Loaded the target variable Y from data/processed/Y.pkl.")
 
     

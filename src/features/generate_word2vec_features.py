@@ -2,7 +2,6 @@ import pickle
 import numpy as np
 from sklearn.preprocessing import MultiLabelBinarizer
 from src.utils.eval_metrics import *
-import os
 from sklearn.model_selection import train_test_split
 
 with open('data/interim/movies_with_overviews.pkl','rb') as f:
@@ -65,15 +64,12 @@ print("Calculated the mean word2vec vector for each overview.")
 
 mlb=MultiLabelBinarizer()
 Y=mlb.fit_transform(genres)
-print("Created a multi-label binarizer for genres.")
-print("Transformed the target variable for each movie using the multi-label binarizer to an array or arrays.")
-print("\tFor a movie with genre ids [36, 53, 10752], we create Y for the movie as [0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0].")
+
+with open('data/processed/Y.pkl','rb') as f:
+    Y=pickle.load(f)
+print("Loaded the list of binarized outcomes from data/processed/Y.pkl.")
 
 textual_features=(X,Y)
 with open('data/processed/textual_features.pkl','wb') as f:
     pickle.dump(textual_features,f)
 print("Saved the mean word2vec vector for each overview (X) and the binarized target (Y) as textual_features=(X,Y) into data/processed/textual_features.pkl.")
-with open('models/mlb.pkl','wb') as f:
-    pickle.dump(mlb,f)
-print("Saved the multi-label binarizer so we can do the inverse transform later as models/mlb.pkl.")
-os.remove("data/external/GoogleNews-vectors-negative300-SLIM.bin")

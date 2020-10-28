@@ -1,25 +1,15 @@
 from src.utils.initialize import *
-# import re
 
 
-with open('data/processed/Y.pkl','rb') as f:
-    Y=pickle.load(f)
-print("Loaded the target variable from to data/processed/Y.pkl.\n")
 with open('data/interim/movies_with_overviews.pkl','rb') as f:
     movies_with_overviews=pickle.load(f)
 print("Loaded the list of de-duped movies with overviews from data/interim/movies_with_overviews.pkl.")
-with open('data/processed/Genredict.pkl','rb') as f:
-    Genre_ID_to_name=pickle.load(f)  
-print('Loaded the mapping from genre id to genre name from data/processed/Genredict.pkl.')
-    
-genre_names=list(Genre_ID_to_name.values())
 
 # remove some punctuation
 def remove_punctuation(input_string):
     input_string = input_string.replace(',','')
     cleaned_string = input_string.replace('.','')    
     return cleaned_string
-
 
 content=[]
 for i in range(len(movies_with_overviews)):

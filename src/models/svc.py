@@ -8,20 +8,21 @@ import pickle
 
 with open('data/interim/movies_with_overviews.pkl','rb') as f:
     movies_with_overviews=pickle.load(f)
-with open('data/processed/Genredict.pkl','rb') as f:
+print("Loaded the list of de-duped movies with overviews from data/interim/movies_with_overviews.pkl.")
+
+with open('data/processed/genre_id_to_name_dict.pkl','rb') as f:
     Genre_ID_to_name=pickle.load(f)  
+print('Loaded the mapping from genre id to genre name from data/processed/genre_id_to_name_dict.pkl.')
+
 with open('data/processed/Y.pkl','rb') as f:
     Y=pickle.load(f)
-print("Loaded the list of de-duped movies with overviews from data/interim/movies_with_overviews.pkl.")
-print('Loaded the mapping from genre id to genre name from data/processed/Genredict.pkl.')
 print("Loaded the target variable Y from data/processed/Y.pkl.")
 
-
-# Feature Selection and Test/Train Split
 with open('data/processed/X_tfidf.pkl','rb') as f:
     X=pickle.load(f)
 print("Loaded X_tfidf from data/processed/X_tfidf.pkl.\n")
 
+# Test/Train Split
 indecies = range(len(movies_with_overviews))
 X_train, X_test, Y_train, Y_test, train_movies, test_movies = train_test_split(X, Y, indecies, test_size=0.20, random_state=42)
 genre_names=list(Genre_ID_to_name.values())

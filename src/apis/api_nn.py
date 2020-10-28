@@ -9,7 +9,7 @@ import subprocess
 
 subprocess.call(['sh', 'src/models/get_word2vec.sh'])
 
-with open('data/processed/Genredict.pkl','rb') as f:
+with open('data/processed/genre_id_to_name_dict.pkl','rb') as f:
     Genre_ID_to_name=pickle.load(f)
     
 model_textual = load_model('models/overview_nn.h5')
