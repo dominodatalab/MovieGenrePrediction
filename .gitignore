@@ -4,6 +4,7 @@ data/interim/*
 data/processed/*
 data/raw/*
 models/*
+src/report/generated/
 dominostats.json
 
 # Byte-compiled / optimized / DLL files
