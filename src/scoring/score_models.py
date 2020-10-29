@@ -60,6 +60,34 @@ print("\nNaive Bayes with with raw count features")
 print("\tMean precision between genres is {prec_mean}.".format(prec_mean=prec_mean))
 print("\tMean recall between genres is {rec_mean}.".format(rec_mean=rec_mean))
 
+############## SVC #################
+
+with open('models/classifier_svc.pkl','rb') as f:
+    svc_classifier=pickle.load(f)
+
+predstfidf=svc_classifier.predict(tfidf_count_features)
+# print (classification_report(Y_test, predstfidf, target_names=genre_names)) # save to file to show as a result
+
+predictions = generate_predictions(genre_id_to_name, tfidf_count_features, predstfidf)
+precs, recs = precsc_recs(test_movies, movies_with_overviews, genre_id_to_name, predictions)
+
+prec_mean = np.mean(np.asarray(precs))
+rec_mean = np.mean(np.asarray(recs))
+
+
+scores["svc"] = {
+    "prec": prec_mean, 
+    "rec": rec_mean
+}
+
+print("\nSVC with TF-IDF features")
+print("\tMean precision between genres is {prec_mean}.".format(prec_mean=prec_mean))
+print("\tMean recall between genres is {rec_mean}.".format(rec_mean=rec_mean))
+
+import json
+with open("models/model_scores.json", "w") as f:
+    json.dump(scores, f)
+
 ############ NN ###############
 
 w2v_nn = keras.models.load_model("models/classifier_nn.h5")
@@ -105,32 +133,3 @@ scores["neural_network"] = {
 print("\nNeural Net with W2V features")
 print("\tMean precision between genres is {prec_mean}.".format(prec_mean=prec_mean))
 print("\tMean recall between genres is {rec_mean}.".format(rec_mean=rec_mean))
-
-############## SVC #################
-
-with open('models/classifier_svc.pkl','rb') as f:
-    svc_classifier=pickle.load(f)
-
-predstfidf=svc_classifier.predict(tfidf_count_features)
-# print (classification_report(Y_test, predstfidf, target_names=genre_names)) # save to file to show as a result
-
-predictions = generate_predictions(genre_id_to_name, tfidf_count_features, predstfidf)
-precs, recs = precsc_recs(test_movies, movies_with_overviews, genre_id_to_name, predictions)
-
-prec_mean = np.mean(np.asarray(precs))
-rec_mean = np.mean(np.asarray(recs))
-
-
-scores["svc"] = {
-    "prec": prec_mean, 
-    "rec": rec_mean
-}
-
-print("\nSVC with TF-IDF features")
-print("\tMean precision between genres is {prec_mean}.".format(prec_mean=prec_mean))
-print("\tMean recall between genres is {rec_mean}.".format(rec_mean=rec_mean))
-
-import json
-with open("models/model_scores.json", "w") as f:
-    json.dump(scores, f)
-
