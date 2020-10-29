@@ -5,9 +5,9 @@ from src.scoring.scoring_utils import *
 from sklearn.metrics import classification_report
 import keras
 
-with open('data/interim/movies_with_overviews.pkl','rb') as f:
+with open('data/processed/movies_with_overviews.pkl','rb') as f:
     movies_with_overviews=pickle.load(f)
-print("Loaded the list of de-duped movies with overviews from data/interim/movies_with_overviews.pkl.")
+print("Loaded the list of de-duped movies with overviews from data/processed/movies_with_overviews.pkl.")
 
 with open('data/processed/raw_count_features_test.pkl','rb') as f:
     raw_count_features_test=pickle.load(f)
@@ -35,6 +35,8 @@ print('Loaded the mapping from genre id to genre name from data/processed/genre_
 
 genre_names=list(genre_id_to_name.values())
 
+scores = {}
+
 ########## Naive ############
 
 with open('models/classifier_nb.pkl','rb') as f:
@@ -48,6 +50,11 @@ precs, recs = precsc_recs(test_movies, movies_with_overviews, genre_id_to_name, 
 
 prec_mean = np.mean(np.asarray(precs))
 rec_mean = np.mean(np.asarray(recs))
+
+scores["naive_bayes"] = {
+    "prec": prec_mean, 
+    "rec": rec_mean
+}
 
 print("\nNaive Bayes with with raw count features")
 print("\tMean precision between genres is {prec_mean}.".format(prec_mean=prec_mean))
@@ -90,6 +97,11 @@ for i in range(len(Y_preds)):
 prec_mean = np.mean(np.asarray(precs))
 rec_mean = np.mean(np.asarray(recs))
 
+scores["neural_network"] = {
+    "prec": prec_mean, 
+    "rec": rec_mean
+}
+
 print("\nNeural Net with W2V features")
 print("\tMean precision between genres is {prec_mean}.".format(prec_mean=prec_mean))
 print("\tMean recall between genres is {rec_mean}.".format(rec_mean=rec_mean))
@@ -108,6 +120,17 @@ precs, recs = precsc_recs(test_movies, movies_with_overviews, genre_id_to_name, 
 prec_mean = np.mean(np.asarray(precs))
 rec_mean = np.mean(np.asarray(recs))
 
+
+scores["svc"] = {
+    "prec": prec_mean, 
+    "rec": rec_mean
+}
+
 print("\nSVC with TF-IDF features")
 print("\tMean precision between genres is {prec_mean}.".format(prec_mean=prec_mean))
 print("\tMean recall between genres is {rec_mean}.".format(rec_mean=rec_mean))
+
+import json
+with open("models/model_scores.json", "w") as f:
+    json.dump(scores, f)
+

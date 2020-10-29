@@ -1,7 +1,7 @@
 from src.utils.initialize import *
 from sklearn.model_selection import train_test_split
 
-with open('data/interim/movies_with_overviews.pkl','rb') as f:
+with open('data/processed/movies_with_overviews.pkl','rb') as f:
     movies_with_overviews=pickle.load(f)
 
 with open('data/interim/vectorized_target.pkl','rb') as f:

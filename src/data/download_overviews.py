@@ -23,9 +23,9 @@ print("Done! Created a dataset where each movie must have an associated overview
 len(movies_with_overviews)
 
 
-print("Saving the list of movies that have overviews (movies_with_overviews) as data/interim/movies_with_overviews.pkl....")
+print("Saving the list of movies that have overviews (movies_with_overviews) as data/processed/movies_with_overviews.pkl....")
 print('\tHere are the first entry in movies_with_overviews:')
 pprint.pprint(movies_with_overviews[0], indent=4)
-with open('data/interim/movies_with_overviews.pkl','wb') as f:
+with open('data/processed/movies_with_overviews.pkl','wb') as f:
     pickle.dump(movies_with_overviews,f)
-print("Saved the list of movies that have overviews (movies_with_overviews) as data/interim/movies_with_overviews.pkl.")
+print("Saved the list of movies that have overviews (movies_with_overviews) as data/processed/movies_with_overviews.pkl.")

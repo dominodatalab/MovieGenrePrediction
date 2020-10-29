@@ -1,9 +1,9 @@
 from src.utils.initialize import *
 
 
-with open('data/interim/movies_with_overviews.pkl','rb') as f:
+with open('data/processed/movies_with_overviews.pkl','rb') as f:
     movies_with_overviews=pickle.load(f)
-print("Loaded the list of de-duped movies with overviews from data/interim/movies_with_overviews.pkl.")
+print("Loaded the list of de-duped movies with overviews from data/processed/movies_with_overviews.pkl.")
 
 # remove some punctuation
 def remove_punctuation(input_string):

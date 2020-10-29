@@ -3,9 +3,9 @@ import numpy as np
 from sklearn.preprocessing import MultiLabelBinarizer
 from sklearn.model_selection import train_test_split
 
-with open('data/interim/movies_with_overviews.pkl','rb') as f:
+with open('data/processed/movies_with_overviews.pkl','rb') as f:
     final_movies_set=pickle.load(f)
-print("Loaded the list of de-duped movies with overviews from data/interim/movies_with_overviews.pkl.")
+print("Loaded the list of de-duped movies with overviews from data/processed/movies_with_overviews.pkl.")
 
 
 from gensim import models

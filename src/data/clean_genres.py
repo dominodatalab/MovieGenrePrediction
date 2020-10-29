@@ -2,9 +2,9 @@ from src.utils.initialize import *
 import pprint
 import pickle
 
-with open('data/interim/movies_with_overviews.pkl','rb') as f:
+with open('data/processed/movies_with_overviews.pkl','rb') as f:
     movies_with_overviews=pickle.load(f)
-print("Loaded the list of movies that have overviews from data/interim/movies_with_overviews.pkl.\n")
+print("Loaded the list of movies that have overviews from data/processed/movies_with_overviews.pkl.\n")
 
 # list of genres and movie ids in prep for binarizination
 print("Extracting the genres and movie ids in prep for binarizination...")

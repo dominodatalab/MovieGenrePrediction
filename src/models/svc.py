@@ -1,6 +1,3 @@
-# non deep learning on bag of words
-
-# load pickles and libraries
 from src.utils.initialize import *
 from sklearn.model_selection import train_test_split
 import pickle
