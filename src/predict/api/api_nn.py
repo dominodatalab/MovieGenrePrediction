@@ -12,7 +12,7 @@ subprocess.call(['sh', 'src/models/get_word2vec.sh'])
 with open('data/processed/genre_id_to_name_dict.pkl','rb') as f:
     Genre_ID_to_name=pickle.load(f)
     
-model_textual = load_model('models/overview_nn.h5')
+model_textual = load_model('models/classifier_nn.h5')
 w2v_model = models.KeyedVectors.load_word2vec_format('data/external/GoogleNews-vectors-negative300-SLIM.bin', binary=True)
 tokenizer = RegexpTokenizer(r'\w+')
 en_stop = get_stop_words('en')

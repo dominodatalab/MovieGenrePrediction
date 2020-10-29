@@ -5,7 +5,7 @@
 python src/data/download_movie_list.py
 python src/data/download_overviews.py
 python src/data/clean_genres.py
-python src/features/generate_binarized_outcomes.py
+python src/features/generate_vectorized_outcomes.py
 python src/features/generate_count_features.py
 # sh src/utils/get_word2vec.sh
 python src/features/generate_word2vec_features.py
