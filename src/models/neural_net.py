@@ -10,9 +10,21 @@ import time
 
 from sklearn.model_selection import train_test_split
 
-with open('data/processed/textual_features.pkl','rb') as f:
-    (X,Y)=pickle.load(f)
-print("Loaded X and Y from data/processed/textual_features.pkl.")
+with open('data/processed/target_train.pkl','rb') as f:
+    Y_train=pickle.load(f)
+print("Loaded the training target variable Y from data/processed/target_train.pkl.")
+
+with open('data/processed/target_test.pkl','rb') as f:
+    Y_test=pickle.load(f)
+print("Loaded the testing target variable Y from data/processed/target_test.pkl.")
+
+with open('data/processed/w2v_features_train.pkl','rb') as f:
+    X_train=pickle.load(f)
+print("Loaded X from data/processed/w2v_features_train.pkl.\n")
+
+with open('data/processed/w2v_features_test.pkl','rb') as f:
+    X_test=pickle.load(f)
+print("Loaded X from data/processed/w2v_features_test.pkl.\n")
 
 with open('models/mlb.pkl','rb') as f:
     mlb=pickle.load(f)
@@ -22,15 +34,15 @@ with open('data/processed/genre_id_to_name_dict.pkl','rb') as f:
     Genre_ID_to_name=pickle.load(f)
 print('Loaded the mapping from genre id to genre name from data/processed/genre_id_to_name_dict.pkl.')
 
-X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.20, random_state=42)
-print("\nSplit X and Y into a training and test set. Split was 80-20.")
+# X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.20, random_state=42)
+# print("\nSplit X and Y into a training and test set. Split was 80-20.")
 print("\tShape of X_test is {X_test}.".format(X_test=X_test.shape))
 print("\tShape of X_train is {X_train}.\n".format(X_train=X_train.shape))
 
 model_textual = Sequential([
     Dense(300, input_shape=(300,)),
     Activation('relu'),
-    Dense(np.shape(Y)[1]),
+    Dense(np.shape(Y_train)[1]),
     Activation('softmax'),
 ])
 

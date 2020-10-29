@@ -29,27 +29,27 @@ print("Vectorized the text of the overviews using the CountVectorizer from sciki
 print("\tShape of X with count vectorizer:")
 print('\t'+str(X.shape))
 
-with open('data/processed/X.pkl','wb') as f:
+with open('data/interim/raw_count_features.pkl','wb') as f:
     pickle.dump(X,f)
 with open('models/count_vectorizer.pkl','wb') as f:
     pickle.dump(vectorize,f)
-print("\tSaved X to data/processed/X.pkl and the vectorizer as models/count_vectorizer.pkl.")
+print("\tSaved X to data/interim/raw_count_features.pkl and the vectorizer as models/count_vectorizer.pkl.")
 print('\tHere are the first row of X (remember that it is a sparse matrix):')
 print('\t {X}'.format(X=X[0]))
 
 # TF-IDF
 from sklearn.feature_extraction.text import TfidfTransformer
 tfidf_transformer = TfidfTransformer()
-X_tfidf = tfidf_transformer.fit_transform(X)
+tfidf_features = tfidf_transformer.fit_transform(X)
 print("Vectorized the text of the overviews using the TfidfVectorizer from scikit-learn.")
 print("\tShape of X with TF-IDF vectorizer:")
-print('\t'+str(X_tfidf.shape))
-with open('data/processed/X_tfidf.pkl','wb') as f:
-    pickle.dump(X_tfidf,f)
+print('\t'+str(tfidf_features.shape))
+with open('data/interim/tfidf_count_features.pkl','wb') as f:
+    pickle.dump(tfidf_features,f)
 with open('models/tfidf_transformer.pkl','wb') as f:
     pickle.dump(tfidf_transformer,f)
-print("\tSaved X_tfidf to data/processed/X_tfidf.pkl and the vectorizer as models/tfidf_transformer.pkl.")
-print('\tHere are the first row of X_tfidf (remember that it is as sparse matrix):')
-print('\t {X}'.format(X=X_tfidf[0]))
+print("\tSaved tfidf_features to data/interim/tfidf_count_features.pkl and the vectorizer as models/tfidf_transformer.pkl.")
+print('\tHere are the first row of tfidf_features (remember that it is as sparse matrix):')
+print('\t {X}'.format(X=tfidf_features[0]))
 
 

@@ -7,25 +7,36 @@ from sklearn.model_selection import train_test_split
 
 with open('data/interim/movies_with_overviews.pkl','rb') as f:
     movies_with_overviews=pickle.load(f)
+print("Loaded the list of de-duped movies with overviews from data/interim/movies_with_overviews.pkl.")
+
 with open('data/processed/genre_id_to_name_dict.pkl','rb') as f:
     Genre_ID_to_name=pickle.load(f)  
-with open('data/processed/Y.pkl','rb') as f:
-    Y=pickle.load(f)
-print("Loaded the list of de-duped movies with overviews from data/interim/movies_with_overviews.pkl.")
 print('Loaded the mapping from genre id to genre name from data/processed/genre_id_to_name_dict.pkl.')
-print("Loaded the target variable Y from data/processed/Y.pkl.")
 
-    
-# Feature Selection and Test/Train Split
+with open('data/processed/target_train.pkl','rb') as f:
+    Y_train=pickle.load(f)
+print("Loaded the training target variable Y from data/processed/target_train.pkl.")
 
-with open('data/processed/X.pkl','rb') as f:
-    X=pickle.load(f)
-print("Loaded X from data/processed/X.pkl.\n")
+with open('data/processed/target_test.pkl','rb') as f:
+    Y_test=pickle.load(f)
+print("Loaded the testing target variable Y from data/processed/target_test.pkl.")
 
+with open('data/processed/raw_count_features_train.pkl','rb') as f:
+    X_train=pickle.load(f)
+print("Loaded X from data/processed/raw_count_features_train.pkl.\n")
 
-indecies = range(len(movies_with_overviews))
-X_train, X_test, Y_train, Y_test, train_movies, test_movies = train_test_split(X, Y, indecies, test_size=0.20, random_state=42)
-print("Split X and Y into a training and test set. Split was 80-20.")
+with open('data/processed/raw_count_features_test.pkl','rb') as f:
+    X_test=pickle.load(f)
+print("Loaded X from data/processed/raw_count_features_test.pkl.\n")
+
+with open('data/processed/indeces_train.pkl','rb') as f:
+    train_movies=pickle.load(f)
+print("Loaded train_movies from data/processed/indeces_train.pkl.\n")
+
+with open('data/processed/indeces_test.pkl','rb') as f:
+    test_movies=pickle.load(f)
+print("Loaded test_movies from data/processed/indeces_test.pkl.\n")
+
 print("Shape of X_test is {X_test}.".format(X_test=X_test.shape))
 print("Shape of X_train is {X_train}.\n".format(X_train=X_train.shape))
 

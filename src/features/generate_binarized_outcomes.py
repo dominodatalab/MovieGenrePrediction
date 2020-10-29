@@ -19,8 +19,8 @@ with open('models/mlb.pkl','wb') as f:
     pickle.dump(mlb,f)
 print("Saved the multi-label binarizer so we can do the inverse transform later as models/mlb.pkl.")
 
-with open('data/processed/Y.pkl','wb') as f:
+with open('data/interim/onehot_target.pkl','wb') as f:
     pickle.dump(Y,f)
-print("Saved the target variable Y to data/processed/Y.pkl.\n")
+print("Saved the target variable Y to data/interim/onehot_target.pkl.\n")
 print('\tHere are the first few lines of Y:')
 print('\t'+str(Y[:5]))

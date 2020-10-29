@@ -61,15 +61,6 @@ print("Tokenized all overviews.")
 print("Removed stopwords.")
 print("Calculated the mean word2vec vector for each overview.")
 
-
-mlb=MultiLabelBinarizer()
-Y=mlb.fit_transform(genres)
-
-with open('data/processed/Y.pkl','rb') as f:
-    Y=pickle.load(f)
-print("Loaded the list of binarized outcomes from data/processed/Y.pkl.")
-
-textual_features=(X,Y)
-with open('data/processed/textual_features.pkl','wb') as f:
-    pickle.dump(textual_features,f)
-print("Saved the mean word2vec vector for each overview (X) and the binarized target (Y) as textual_features=(X,Y) into data/processed/textual_features.pkl.")
+with open('data/interim/w2v_features.pkl','wb') as f:
+    pickle.dump(X,f)
+print("Saved the mean word2vec vector for each overview into data/interim/w2v_features.pkl.")
