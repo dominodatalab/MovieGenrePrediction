@@ -1,4 +1,5 @@
 import pickle
+from src.features.utils import remove_punctuation
 
 with open('models/count_vectorizer.pkl','rb') as f:
     count_vectorizer=pickle.load(f)
@@ -10,11 +11,6 @@ with open('models/tfidf_transformer.pkl','rb') as f:
     tfidf_transformer=pickle.load(f)
 
 genre_list=sorted(list(Genre_ID_to_name.keys()))
-
-def remove_punctuation(input_string):
-    cleaned_string = input_string.replace(',','')
-    cleaned_string = cleaned_string.replace('.','')    
-    return cleaned_string
 
 def svc_predict(input_string):
     cleaned_string = remove_punctuation(input_string)
@@ -29,3 +25,4 @@ def svc_predict(input_string):
             pred_genres.append(genre)
     return pred_genres #, pred_prob
 
+# print(svc_predict("The boy with long stripped pants jumped over many walls to get to the computer."))

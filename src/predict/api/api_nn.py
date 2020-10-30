@@ -10,17 +10,19 @@ import subprocess
 subprocess.call(['sh', 'src/models/get_word2vec.sh'])
 
 with open('data/processed/genre_id_to_name_dict.pkl','rb') as f:
-    Genre_ID_to_name=pickle.load(f)
+    genre_id_to_name=pickle.load(f)
     
-model_textual = load_model('models/classifier_nn.h5')
+w2v_nn = load_model('models/classifier_nn.h5')
+
+# TODO: this code is repeated here. It should be imported from a common place and used in both
+# training feature gen and prediction.
 w2v_model = models.KeyedVectors.load_word2vec_format('data/external/GoogleNews-vectors-negative300-SLIM.bin', binary=True)
 tokenizer = RegexpTokenizer(r'\w+')
 en_stop = get_stop_words('en')
 with open('models/mlb.pkl','rb') as f:
     mlb=pickle.load(f)
 
-genre_list=sorted(list(Genre_ID_to_name.keys()))
-
+genre_list=sorted(list(genre_id_to_name.keys()))
 
 def nn_predict(input_string):
     movie_mean_wordvec=np.zeros((1,300))
@@ -34,9 +36,9 @@ def nn_predict(input_string):
             s+=w2v_model[tok.lower()]
     if count_in_vocab!=0:
         movie_mean_wordvec[0]=s/float(count_in_vocab)
-    pred_array = model_textual.predict(movie_mean_wordvec)
+    pred_array = w2v_nn.predict(movie_mean_wordvec)
     predicted = np.argsort(pred_array[0])[::-1][:3]
     predicted_genre_Y = np.array([[1 if k in predicted else 0 for k in range(len(pred_array[0])) ]])
     predicted_genre_ids = mlb.inverse_transform(predicted_genre_Y)[0]
-    predicted_genres = list(map(Genre_ID_to_name.get, predicted_genre_ids))
+    predicted_genres = list(map(genre_id_to_name.get, predicted_genre_ids))
     return predicted_genres

@@ -1,4 +1,5 @@
 import pickle
+from src.features.utils import remove_punctuation
 
 with open('models/count_vectorizer.pkl','rb') as f:
     count_vectorizer=pickle.load(f)
@@ -8,11 +9,6 @@ with open('data/processed/genre_id_to_name_dict.pkl','rb') as f:
     genre_id_to_name=pickle.load(f)
 
 genre_list=sorted(list(genre_id_to_name.keys()))
-
-def remove_punctuation(input_string):
-    cleaned_string = input_string.replace(',','')
-    cleaned_string = cleaned_string.replace('.','')    
-    return cleaned_string
     
 def nb_predict(input_string):
     cleaned_string = remove_punctuation(input_string)
@@ -27,3 +23,6 @@ def nb_predict(input_string):
             pred_genres.append(genre)
             pred_prob_return.append(pred_prob_all[0][i])
     return [pred_genres, pred_prob_return]
+
+
+# print(nb_predict("The boy with long stripped pants jumped over many walls to get to the computer."))

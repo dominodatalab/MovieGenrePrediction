@@ -19,9 +19,7 @@ tokenizer = RegexpTokenizer(r'\w+')
 # create English stop words list
 en_stop = get_stop_words('en')
 
-
 movie_mean_wordvec=np.zeros((len(final_movies_set),300))
-
 
 genres=[]
 rows_to_delete=[]
