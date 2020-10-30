@@ -3,8 +3,10 @@ data/external/*
 data/interim/*
 data/processed/*
 data/raw/*
+!data/**/.gitkeep
 models/*
-src/report/generated/
+!models/**/*.gitkeep
+src/report/generated/*.*
 dominostats.json
 
 # Byte-compiled / optimized / DLL files
@@ -146,3 +148,6 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 GoogleNews-vectors-negative300-SLIM.bin.gz
+
+# PyCharm
+/.idea/
