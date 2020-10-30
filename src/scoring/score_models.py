@@ -43,7 +43,6 @@ with open('models/classifier_nb.pkl','rb') as f:
     classifnb = pickle.load(f)
     
 predsnb=classifnb.predict(raw_count_features_test)
-# print (classification_report(target_test, predsnb, target_names=genre_names))
 
 predictionsnb = generate_predictions(genre_id_to_name, raw_count_features_test, predsnb)
 precs, recs = precsc_recs(test_movies, movies_with_overviews, genre_id_to_name, predictionsnb)
@@ -66,7 +65,6 @@ with open('models/classifier_svc.pkl','rb') as f:
     svc_classifier=pickle.load(f)
 
 predstfidf=svc_classifier.predict(tfidf_count_features)
-# print (classification_report(Y_test, predstfidf, target_names=genre_names)) # save to file to show as a result
 
 predictions = generate_predictions(genre_id_to_name, tfidf_count_features, predstfidf)
 precs, recs = precsc_recs(test_movies, movies_with_overviews, genre_id_to_name, predictions)
@@ -90,7 +88,6 @@ w2v_nn = keras.models.load_model("models/classifier_nn.h5")
 with open('models/mlb.pkl','rb') as f:
     mlb=pickle.load(f)
 
-# score = w2v_nn.evaluate(w2v_features, target_test, batch_size=249)
 Y_preds=w2v_nn.predict(w2v_features)
 
 precs=[]
