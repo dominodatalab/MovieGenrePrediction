@@ -44,10 +44,12 @@ tfidf_features = tfidf_transformer.fit_transform(X)
 print("Vectorized the text of the overviews using the TfidfVectorizer from scikit-learn.")
 print("\tShape of X with TF-IDF vectorizer:")
 print('\t'+str(tfidf_features.shape))
+
 with open('data/interim/tfidf_count_features.pkl','wb') as f:
     pickle.dump(tfidf_features,f)
 with open('models/tfidf_transformer.pkl','wb') as f:
     pickle.dump(tfidf_transformer,f)
+    
 print("\tSaved tfidf_features to data/interim/tfidf_count_features.pkl and the vectorizer as models/tfidf_transformer.pkl.")
 print('\tHere are the first row of tfidf_features (remember that it is as sparse matrix):')
 print('\t {X}'.format(X=tfidf_features[0]))

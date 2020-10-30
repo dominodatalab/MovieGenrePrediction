@@ -5,11 +5,9 @@ with open('models/count_vectorizer.pkl','rb') as f:
 with open('models/classifier_nb.pkl','rb') as f:
     classif_nb=pickle.load(f)
 with open('data/processed/genre_id_to_name_dict.pkl','rb') as f:
-    Genre_ID_to_name=pickle.load(f)
+    genre_id_to_name=pickle.load(f)
 
-
-
-genre_list=sorted(list(Genre_ID_to_name.keys()))
+genre_list=sorted(list(genre_id_to_name.keys()))
 
 def remove_punctuation(input_string):
     cleaned_string = input_string.replace(',','')
@@ -25,7 +23,7 @@ def nb_predict(input_string):
     pred_prob_return = []
     for i, score in enumerate(pred_array[0]):
         if score!=0:
-            genre=Genre_ID_to_name[genre_list[i]]
+            genre=genre_id_to_name[genre_list[i]]
             pred_genres.append(genre)
             pred_prob_return.append(pred_prob_all[0][i])
     return [pred_genres, pred_prob_return]

@@ -37,7 +37,7 @@ print('\n')
 # We now sample 100 movies per genre. Problem is that the sorting is by popular movies, so they will overlap.
 # In other words, popular movies may be in more than 1 genre.
 # Need to exclude movies that were already sampled. 
-movies = []
+raw_movies = []
 baseyear = 2017
  
 print('Starting pulling movies from TMDB from each genre. This will take a while, please wait...')
@@ -55,40 +55,15 @@ for g_id in nr_ids:
         data = urllib.request.urlopen(url).read()
  
         dataDict = json.loads(data)
-        movies.extend(dataDict["results"])
-    last_movies = list(map(lambda x: x['title'],movies[-3:]))
+        raw_movies.extend(dataDict["results"])
+    
+    last_movies = list(map(lambda x: x['title'], raw_movies[-3:]))
     for title in last_movies:
         print('\t\t'+title)
     done_ids.append(str(g_id))
 print("\tPulled movies for genres - "+','.join(done_ids))
 print('\n')
- 
-# Remove duplicates
-movie_ids = [m['id'] for m in movies]
-print ("Originally we had ",len(movie_ids)," movies")
-movie_ids=np.unique(movie_ids)
-seen_before=[]
-no_duplicate_movies=[]
-for i in range(len(movies)):
-    movie=movies[i]
-    id=movie['id']
-    if id in seen_before:
-        continue
-        print ("Seen before")
-    else:
-        seen_before.append(id)
-        no_duplicate_movies.append(movie)
-        
-print ("After removing duplicates we have ",len(no_duplicate_movies), " movies")
-print('\n')
 
-print("Saving the list of de-duped list of movies (no_duplicate_movies) as data/interim/no_duplicate_movies.pkl...")
-print('\tHere are the first 3 entries in no_duplicate_movies:')
-pprint.pprint(no_duplicate_movies[:3], indent=4)
-with open('data/interim/no_duplicate_movies.pkl', 'wb') as f:
-    pickle.dump(no_duplicate_movies, f)
-print("Saved the list of de-duped list of movies as data/interim/no_duplicate_movies.pkl.")    
-
-
-
-## TODO include a dominostats.json
+with open('data/raw/raw_movies.pkl', 'wb') as f:
+    pickle.dump(raw_movies, f)
+print("Saved the list of de-duped list of movies as data/raw/raw_movies.pkl.")

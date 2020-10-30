@@ -84,10 +84,6 @@ print("\nSVC with TF-IDF features")
 print("\tMean precision between genres is {prec_mean}.".format(prec_mean=prec_mean))
 print("\tMean recall between genres is {rec_mean}.".format(rec_mean=rec_mean))
 
-import json
-with open("models/model_scores.json", "w") as f:
-    json.dump(scores, f)
-
 ############ NN ###############
 
 w2v_nn = keras.models.load_model("models/classifier_nn.h5")
@@ -133,3 +129,7 @@ scores["neural_network"] = {
 print("\nNeural Net with W2V features")
 print("\tMean precision between genres is {prec_mean}.".format(prec_mean=prec_mean))
 print("\tMean recall between genres is {rec_mean}.".format(rec_mean=rec_mean))
+
+import json
+with open("models/model_scores.json", "w") as f:
+    json.dump(scores, f)
