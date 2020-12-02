@@ -40,3 +40,207 @@ Open repository: /mnt/code
 > git remote --verbose
 > git config --get commit.template
 > git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git ls-files --stage -- /mnt/code/test_PAT.txt
+> git cat-file -s facb80624f62a9d9afff130311f937319f421575
+> git show :test_PAT.txt
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git ls-files --stage -- /mnt/code/test_PAT.txt
+> git cat-file -s facb80624f62a9d9afff130311f937319f421575
+> git show :test_PAT.txt
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git ls-files --stage -- /mnt/code/test_PAT.txt
+> git cat-file -s facb80624f62a9d9afff130311f937319f421575
+> git show :test_PAT.txt
+> git ls-files --stage -- /mnt/code/test_PAT.txt
+> git cat-file -s facb80624f62a9d9afff130311f937319f421575
+> git show :test_PAT.txt
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :LICENSE
+> git ls-files --stage -- /mnt/code/LICENSE
+> git cat-file -s 7b8e0c237cc025e2534683d54899456dbe1903b3
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :test_PAT.txt
+> git ls-files --stage -- /mnt/code/test_PAT.txt
+> git cat-file -s facb80624f62a9d9afff130311f937319f421575
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :LICENSE
+> git ls-files --stage -- /mnt/code/LICENSE
+> git cat-file -s 7b8e0c237cc025e2534683d54899456dbe1903b3
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
