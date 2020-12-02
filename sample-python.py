@@ -20,7 +20,7 @@ def random_number(start, stop):
 
 
 # Plot the values of random points
-x = random.sample(range(1000), 100)
+x = random.sample(range(900),100)
 xbins = [0, len(x)]
 plt.bar(range(0, 100), x)
 artifacts_subdir = os.listdir('/mnt/artifacts/')[0]
