@@ -1,0 +1,54 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+Open repository: /mnt/code
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+> git rev-list --left-right PAT_branch...refs/remotes/origin/PAT_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template

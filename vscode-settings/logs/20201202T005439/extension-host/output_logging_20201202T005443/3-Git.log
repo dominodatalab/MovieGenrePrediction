@@ -171,3 +171,59 @@ fatal: no upstream configured for branch 'PAT_branch'
 > git for-each-ref --format %(refname) %(objectname) --sort -committerdate
 > git remote --verbose
 > git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+fatal: no upstream configured for branch 'PAT_branch'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+fatal: no upstream configured for branch 'PAT_branch'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+fatal: no upstream configured for branch 'PAT_branch'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+fatal: no upstream configured for branch 'PAT_branch'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+fatal: no upstream configured for branch 'PAT_branch'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+fatal: no upstream configured for branch 'PAT_branch'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse PAT_branch
+> git rev-parse --symbolic-full-name PAT_branch@{u}
+fatal: no upstream configured for branch 'PAT_branch'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
