@@ -1,0 +1,3 @@
+[2020-12-02 01:01:51.202] [remoteagent] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/mnt/code/vscode-settings/Machine'
+[2020-12-02 01:01:53.641] [remoteagent] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/mnt/code/vscode-settings/Machine'
+[2020-12-02 01:01:53.641] [remoteagent] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/mnt/code/vscode-settings/Machine'
