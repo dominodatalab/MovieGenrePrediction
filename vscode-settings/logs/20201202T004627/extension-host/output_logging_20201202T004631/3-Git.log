@@ -40,3 +40,50 @@ Open repository: /mnt/code
 > git remote --verbose
 > git config --get commit.template
 > git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse sample_branch
+> git rev-parse --symbolic-full-name sample_branch@{u}
+> git rev-list --left-right sample_branch...refs/remotes/origin/sample_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse sample_branch
+> git rev-parse --symbolic-full-name sample_branch@{u}
+> git rev-list --left-right sample_branch...refs/remotes/origin/sample_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse sample_branch
+> git rev-parse --symbolic-full-name sample_branch@{u}
+> git rev-list --left-right sample_branch...refs/remotes/origin/sample_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse sample_branch
+> git rev-parse --symbolic-full-name sample_branch@{u}
+> git rev-list --left-right sample_branch...refs/remotes/origin/sample_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse sample_branch
+> git rev-parse --symbolic-full-name sample_branch@{u}
+> git rev-list --left-right sample_branch...refs/remotes/origin/sample_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse sample_branch
+> git rev-parse --symbolic-full-name sample_branch@{u}
+> git rev-list --left-right sample_branch...refs/remotes/origin/sample_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
