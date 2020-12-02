@@ -380,3 +380,81 @@ Error: ENOENT: no such file or directory, watch '/mnt/code/.git/refs/remotes/ori
 	at runMicrotasks (<anonymous>)
 	at processTicksAndRejections (internal/process/task_queues.js:97:5)
 > git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse sample_branch
+> git rev-parse --symbolic-full-name sample_branch@{u}
+> git rev-list --left-right sample_branch...refs/remotes/origin/sample_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/mnt/code/.git/refs/remotes/origin/sample_branch', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/mnt/code/.git/refs/remotes/origin/sample_branch'
+	at FSWatcher.start (internal/fs/watchers.js:169:26)
+	at Object.watch (fs.js:1339:11)
+	at Object.t.watch (/opt/code-server/lib/vscode/extensions/git/dist/main.js:1:598206)
+	at T.updateTransientWatchers (/opt/code-server/lib/vscode/extensions/git/dist/main.js:1:83808)
+	at e.fire (/opt/code-server/lib/vscode/out/vs/workbench/services/extensions/node/extensionHostProcess.js:48:517)
+	at e.updateModelState (/opt/code-server/lib/vscode/extensions/git/dist/main.js:1:102678)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:97:5)
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse sample_branch
+> git rev-parse --symbolic-full-name sample_branch@{u}
+> git rev-list --left-right sample_branch...refs/remotes/origin/sample_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/mnt/code/.git/refs/remotes/origin/sample_branch', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/mnt/code/.git/refs/remotes/origin/sample_branch'
+	at FSWatcher.start (internal/fs/watchers.js:169:26)
+	at Object.watch (fs.js:1339:11)
+	at Object.t.watch (/opt/code-server/lib/vscode/extensions/git/dist/main.js:1:598206)
+	at T.updateTransientWatchers (/opt/code-server/lib/vscode/extensions/git/dist/main.js:1:83808)
+	at e.fire (/opt/code-server/lib/vscode/out/vs/workbench/services/extensions/node/extensionHostProcess.js:48:517)
+	at e.updateModelState (/opt/code-server/lib/vscode/extensions/git/dist/main.js:1:102678)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:97:5)
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse sample_branch
+> git rev-parse --symbolic-full-name sample_branch@{u}
+> git rev-list --left-right sample_branch...refs/remotes/origin/sample_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/mnt/code/.git/refs/remotes/origin/sample_branch', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/mnt/code/.git/refs/remotes/origin/sample_branch'
+	at FSWatcher.start (internal/fs/watchers.js:169:26)
+	at Object.watch (fs.js:1339:11)
+	at Object.t.watch (/opt/code-server/lib/vscode/extensions/git/dist/main.js:1:598206)
+	at T.updateTransientWatchers (/opt/code-server/lib/vscode/extensions/git/dist/main.js:1:83808)
+	at e.fire (/opt/code-server/lib/vscode/out/vs/workbench/services/extensions/node/extensionHostProcess.js:48:517)
+	at e.updateModelState (/opt/code-server/lib/vscode/extensions/git/dist/main.js:1:102678)
+	at runMicrotasks (<anonymous>)
+	at processTicksAndRejections (internal/process/task_queues.js:97:5)
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse sample_branch
+> git rev-parse --symbolic-full-name sample_branch@{u}
+> git rev-list --left-right sample_branch...refs/remotes/origin/sample_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+Failed to watch ref '/mnt/code/.git/refs/remotes/origin/sample_branch', is most likely packed.
+Error: ENOENT: no such file or directory, watch '/mnt/code/.git/refs/remotes/origin/sample_branch'
+	at FSWatcher.start (internal/fs/watchers.js:169:26)
+	at Object.watch (fs.js:1339:11)
+	at Object.t.watch (/opt/code-server/lib/vscode/extensions/git/dist/main.js:1:598206)
+	at T.updateTransientWatchers (/opt/code-server/lib/vscode/extensions/git/dist/main.js:1:83808)
+	at e.fire (/opt/code-server/lib/vscode/out/vs/workbench/services/extensions/node/extensionHostProcess.js:48:517)
+	at e.updateModelState (/opt/code-server/lib/vscode/extensions/git/dist/main.js:1:102678)
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse sample_branch
+> git rev-parse --symbolic-full-name sample_branch@{u}
+> git rev-list --left-right sample_branch...refs/remotes/origin/sample_branch
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
