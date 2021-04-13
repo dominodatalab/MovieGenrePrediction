@@ -41,7 +41,7 @@ for i in range(len(final_movies_set)):
         genres.pop(-1)
     else:
         for tok in stopped_tokens:
-            if tok.lower() in model2.vocab:
+            if tok.lower() in model2.key_to_index:
                 count_in_vocab+=1
                 s+=model2[tok.lower()]
         if count_in_vocab!=0:
